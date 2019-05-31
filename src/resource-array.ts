@@ -140,7 +140,7 @@ export class ResourceArray<T extends Resource> implements ArrayInterface<T> {
             let idxNextAmp: number = query.indexOf('&', idx) == -1 ? query.indexOf('/', idx) : query.indexOf('&', idx);
 
             if (idx != -1) {
-                let seachValue = query.substring(idx, idxNextAmp);
+                let seachValue = query.substring(idx, idxNextAmp != -1 ? idxNextAmp : query.length);
                 query = query.replace(seachValue, field + '=' + value);
             } else {
                 query = query.concat("&" + field + '=' + value);
