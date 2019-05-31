@@ -1,5 +1,11 @@
 tsconfig.json
-tslint.json
-*.ngFactory.ts
 .idea/*
 package-lock.json
+scripts/
+src/
+node_modules/
+dist/node_modules/
+.travis.yml
+yarn-error.log
+.npmignore
+*.ngFactory.ts
